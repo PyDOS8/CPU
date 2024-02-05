@@ -83,3 +83,15 @@ extern "C"{
             }
         }
     };
+    struct Penis{
+        float memory[4] = {};
+        void writeToMemory(double item){
+            for(int i = 0; i < 5; i++){
+                 if(memory[i] == 0){
+                     memory[i] = item;
+                 }else{
+                     printf("You cannot write to memory because it is too full");
+                 }
+            }
+        }
+    };
