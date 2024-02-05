@@ -24,8 +24,8 @@ extern "C"{
         }
         void deallocateStringMemory(){
             for(int i = 0; i < 4; i++){
-                memory[i] = nullptr;
-                delete[] memory;
+                *memory[i] = nullptr;
+                *memory[i] = nullptr;
             }
         }
     };
