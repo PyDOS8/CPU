@@ -63,13 +63,13 @@ extern "C"{
         }
         void deallocateIntMemory(){
             for(int i = 0; i < 4; i++){
-                intMemory[i] = nullptr;
+                *intMemory[i] = nullptr;
                 *intNemory = nullptr;
             }
         }
         void deallocateDoubleMemory(){
             for(int i = 0; i < 4; i++){
-                doubleMemory[i] = nullptr;
+                *doubleMemory[i] = nullptr;
                 *intMemory = nullptr;
             }
         }
