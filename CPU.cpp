@@ -3,6 +3,7 @@
 extern "C"{
     struct RCS{
         std::string*memory[3];
+        char*charMemory[3];
         void writeToMemory(std::string *item){
             for(int i = 0; i < 4; i++){
                 if(*memory[i] == ""){
@@ -11,6 +12,14 @@ extern "C"{
                     *memory[i] = "";
                     *memory[i] = *item;
                 }
+            }
+        }
+        void writeToCharMemory(char *item){
+            for(int i = 0; i < 4; i++){
+                if(charMemory[i] == 0){
+                    charMemory[i] = *item;
+                }else{
+                    printf("You cannot write to charMemory because it is full \n");
             }
         }
         void clearMemory(){
