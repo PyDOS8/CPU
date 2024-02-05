@@ -73,4 +73,4 @@ extern "C"{
                 *intMemory = nullptr;
             }
         }
-    }
+    };
