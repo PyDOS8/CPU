@@ -4,7 +4,7 @@ extern "C"{
     struct RCS{
         std::string*memory[3];
         void writeToMemory(std::string *item){
-            for(int i = 0; i < 3; i++){
+            for(int i = 0; i < 4; i++){
                 if(*memory[i] == ""){
                     *memory[i] = *item;
                 }else{
