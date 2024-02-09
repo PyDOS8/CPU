@@ -10,6 +10,8 @@ class CPU{
     int *insRegister = nullptr;
     insRegister = new int[1000];
     double  RIDMemory[1000];
+    double RDFMemory[1000];
+    string RSCMemory[1000];
     void addRID(){
         if(RID[0] > 0 && RID[1] > 0.0){
             RID[1] = RID[1] + RID[0];
@@ -75,6 +77,23 @@ class CPU{
             }
         }
     }
+    void WriteStringToRSCMemory(string str){
+        for(int i = 0; i < 1000; i++){
+            if(RSCMemory[i] == 0){
+                RSCMemory[i] = str;
+            }
+        }
+        void clearRSCMemory(){
+            for(int i = 0; i < 1000; i++){
+                if(RSCMemory[i] > 0){
+                    RSCMemory[i] = 0;
+                }else{
+                    cout << "The RSCMemory is already empty" << endl;
+                }
+            }
+        }
+    }
+
     deallocateINSRegister();
 };
 
